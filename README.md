@@ -1,5 +1,7 @@
 # RFPResponder
 
+A prototype that uses Amazon Bedrock (Titan v2) to auto-classify and pre-fill security questionnaires. It reduces manual effort while keeping human oversight.
+
 **RFPResponder** is an AWS-powered framework to **automatically draft answers to security questionnaires and RFPs** by reusing canonical answers and mapping them to policy excerpts.
 
 Instead of manually filling in dozens of repetitive *Yes / No / Number* answers, RFPResponder lets you:
