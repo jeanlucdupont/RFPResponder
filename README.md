@@ -43,19 +43,23 @@ The data used to feed the AI is of very poor quality.
 ---
 
 **canonical2yaml.py**
-
+```
 python canonical2yaml.py `
   --in s3://my-bucket/inbox/canonical-answers.xlsx `
   --out s3://my-bucket/library/answers.yaml `
   --topics --approve --profile XXXXXX
+```
 
 **policies2chunks.py**
+```
 python policies2chunks.py `
   --in s3://my-bucket/policies/ `
   --out s3://my-bucket/library/chunks.json `
   --profile XXXXXX
+```
 
 **genlib**
+```
 python genlib.py `
   --answers s3://my-bucket/library/answers.yaml `
   --chunks  s3://my-bucket/libary/chunks.json `
@@ -63,8 +67,10 @@ python genlib.py `
   --min-sim 0.84 --topk 3 `
   --region us-east-1 `
   --profile myprofile
+````
 
 **rfp-responder.py**
+```
 python rfp-responder.py `
   --xlsx s3://my-bucket/inbox/questionnaire.xlsx `
   --yaml s3://my-bucket/library/standard-answers.yaml `
@@ -72,3 +78,4 @@ python rfp-responder.py `
   --region us-east-1 `
   --min-sim 0.78 `
   --profile myprofile 
+```
