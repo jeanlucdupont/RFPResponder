@@ -8,6 +8,9 @@ Instead of manually filling in dozens of repetitive *Yes / No / Number* answers,
 - Use **Amazon Bedrock Titan embeddings** to auto-link questions to the right policies.
 - Feed in a new Excel questionnaire and generate a pre-filled spreadsheet.
 
+<img width="631" height="467" alt="image" src="https://github.com/user-attachments/assets/50816571-5226-4a8f-9348-04edd9558e34" />
+
+
 ---
 
 ## Disclaimer
