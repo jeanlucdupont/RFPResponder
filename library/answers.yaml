@@ -1,0 +1,2531 @@
+- id: q_2_1_00_01
+  canonical_question: Are all default software settings (i.e. database administrator
+    passwords, Web application framework configurations) changed to ensure a secure
+    configuration?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-01
+- id: q_2_1_00_02
+  canonical_question: Do you  have a standard configuration for all software that
+    participates in the provisioning process?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-02
+- id: q_2_1_00_03
+  canonical_question: Do you have a defined change management policy in place for
+    accepting any changes to the approved configuration for all software that participates
+    in the provisioning process?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-03
+- id: q_2_1_00_04
+  canonical_question: Do the provisioning servers provide extensive and configurable
+    auditing and logging functionality?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-04
+- id: q_2_1_00_05
+  canonical_question: Do you assess and document the risks involved in using third-party
+    programming frameworks to develop your applications, and does a Manager approve
+    these risks, in writing?
+  topics:
+  - Third Party
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-05
+- id: q_2_1_00_06
+  canonical_question: Is a detailed code review performed by parties not involved
+    in the development process, before deployment to production?
+  topics:
+  - SDLC
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-06
+- id: q_2_1_00_07
+  canonical_question: Once in production, does an independent party review applications
+    on a yearly basis?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-07
+- id: q_2_1_00_08
+  canonical_question: Does your software restrict access to only authorized users?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-08
+- id: q_2_1_00_09
+  canonical_question: Do the provisioning servers provide a mechanism to detect and
+    lock out unauthorized access attempts?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-09
+- id: q_2_1_00_10
+  canonical_question: Are users who do not have authorization to perform administrative
+    tasks prevented from accessing administrator functions?
+  topics:
+  - Identity
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-10
+- id: q_2_1_00_11
+  canonical_question: Do the provisioning servers restrict a user’s access to specific
+    activities for which they have a defined need and authorization to perform, including
+    the provisioning process and administrative functions?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-11
+- id: q_2_1_00_12
+  canonical_question: Do the provisioning servers maintain a log of all provisioning
+    requests and details associated with that request (such as time and outcome)?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-12
+- id: q_2_1_00_13
+  canonical_question: Are access privileges to log data always modified under dual
+    control?
+  topics:
+  - Identity
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-13
+- id: q_2_1_00_14
+  canonical_question: Does any sensitive information or transactions appear in logged
+    data in clear text?
+  topics:
+  - Logging
+  default:
+    answer_type: 'No'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-14
+- id: q_2_1_00_15
+  canonical_question: Do the provisioning servers record and/or flag any attempted
+    efforts to access privileged functionality?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-15
+- id: q_2_1_00_16
+  canonical_question: Is database access restricted on the basis of least-privilege
+    and need-to-know?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-16
+- id: q_2_1_00_17
+  canonical_question: 'Do the provisioning servers provide a mechanism to abort a
+    subscriber’s provisioning after a set
+
+    number of failures?'
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-17
+- id: q_2_1_00_18
+  canonical_question: Is provisioning software designed for modularity in such a way
+    that the database server and application server are implemented on physically
+    separated servers?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-18
+- id: q_2_1_00_19
+  canonical_question: Are provisioning servers hardened (i.e. running minimum services,
+    file system security locked down, etc.)?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.00-19
+- id: q_2_1_01_01a
+  canonical_question: Is the identity of a user and their authorization to access
+    sensitive data validated on each request?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.01-01a
+- id: q_2_1_01_01b
+  canonical_question: Are form authenticators used to prevent cross-site request forging
+    on all Web application forms?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.01-01b
+- id: q_2_1_01_02a
+  canonical_question: Do cookies contain only the minimum amount of information for
+    functionality?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.01-02a
+- id: q_2_1_01_02b
+  canonical_question: Is cookie content encrypted or hashed?
+  topics:
+  - Encryption
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.01-02b
+- id: q_2_1_01_03
+  canonical_question: Does the web application validate all user input at the server?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.01-03
+- id: q_2_1_01_04
+  canonical_question: Can the web application manage an abnormal session termination?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.01-04
+- id: q_2_1_01_05
+  canonical_question: Has each Web application in production been verified to be free
+    from vulnerabilities relating to the OWASP Top10
+  topics:
+  - SDLC
+  - Vulnerability Management
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.01-05
+- id: q_2_1_01_06
+  canonical_question: How many times each year are Web applications reviewed by an
+    independent third-party?
+  topics:
+  - Third Party
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.1.01-06
+- id: q_2_2_01_02
+  canonical_question: Is all provisioning data encrypted when stored in a database,
+    when transmitted on your internal network, or when transferred through a public
+    network up to the device?
+  topics:
+  - Encryption
+  - Network Security
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.2.01-02
+- id: q_2_2_01_04
+  canonical_question: Are strong cryptography and security protocols such as Secure
+    Sockets Layer (SSL), Transport Layer Security (TLS), or Internet Protocol Security
+    (IPSec) used over all networks?
+  topics:
+  - Encryption
+  - Network Security
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.2.01-04
+- id: q_2_2_01_05a
+  canonical_question: Are all symmetric keys at least 112 bits (not counting parity
+    bits)?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.2.01-05a
+- id: q_2_2_01_05b
+  canonical_question: Are all asymmetric public/private key pairs at least 1024 bits?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.2.01-05b
+- id: q_2_2_01_05d
+  canonical_question: Are all SSL and TLS keys at least 128 bits?
+  topics:
+  - Encryption
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.2.01-05d
+- id: q_2_3_01_01
+  canonical_question: Are all network segments (i.e. connection to public networks,
+    DMZ, internal network zones) separated by a distinct firewall?
+  topics:
+  - Network Security
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-01
+- id: q_2_3_01_03
+  canonical_question: Do all communications between all layers pass through both a
+    stateful inspection firewall and an application-layer firewall?
+  topics:
+  - Network Security
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-03
+- id: q_2_3_01_04
+  canonical_question: Are all provisioning databases and Hardware Security Modules
+    placed on their own network segments, segregated from both public and office networks?
+  topics:
+  - Network Security
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-04
+- id: q_2_3_01_05a
+  canonical_question: Do all firewall configurations prohibit all access by default,
+    and only permit authorized access?
+  topics:
+  - Identity
+  - Network Security
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-05a
+- id: q_2_3_01_05b
+  canonical_question: Do all firewall configurations restrict inbound Internet traffic
+    to Internet Protocol (IP) addresses within the DMZ, if applicable?
+  topics:
+  - Network Security
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-05b
+- id: q_2_3_01_05c
+  canonical_question: Do all firewall configurations allow internal addresses to pass
+    from the Internet into the DMZ, ifapplicable?
+  topics:
+  - Network Security
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-05c
+- id: q_2_3_01_05d
+  canonical_question: Do all firewall configurations perform stateful inspection,
+    also known as dynamic packet filtering (i.e., are only ‘established’ connections
+    allowed into the DMZ or internal zone)?
+  topics:
+  - Network Security
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-05d
+- id: q_2_3_01_05e
+  canonical_question: Do all firewall configurations restrict inbound and outbound
+    traffic to only that which is necessary for the provisioning process at the firewall,
+    router, server, and application layers?
+  topics:
+  - Network Security
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-05e
+- id: q_2_3_01_06a
+  canonical_question: Do all firewalls have real-time logging and alerting capabilities?
+  topics:
+  - Logging
+  - Network Security
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-06a
+- id: q_2_3_01_06b
+  canonical_question: Are all firewalls monitored 24 hours per day, with immediate
+    response when unauthorized activity is detected?
+  topics:
+  - Logging
+  - Network Security
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-06b
+- id: q_2_3_01_07a
+  canonical_question: Are intrusion detection systems implemented for all public network
+    connectivity?
+  topics:
+  - Network Security
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-07a
+- id: q_2_3_01_07b
+  canonical_question: 'Are intrusion detection systems monitored 24 hours per day,
+    with immediate response when
+
+    unauthorized activity is detected?'
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-07b
+- id: q_2_3_01_08a
+  canonical_question: How many times each year do you perform network vulnerability
+    scans against each of your public-facing network interfaces?
+  topics:
+  - Network Security
+  - Vulnerability Management
+  default:
+    answer_type: 4
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-08a
+- id: q_2_3_01_08b
+  canonical_question: Do vulnerability scans include all network components and provisioning
+    servers reachable from the outside world?
+  topics:
+  - Network Security
+  - Vulnerability Management
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-08b
+- id: q_2_3_01_09a
+  canonical_question: How many times each year do you perform penetration testing
+    against all provisioning servers and all public-facing network interfaces?
+  topics:
+  - Network Security
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-09a
+- id: q_2_3_01_09b
+  canonical_question: Does a security vendor approved by MasterCard perform this penetration
+    testing?
+  topics:
+  - Third Party
+  default:
+    answer_type: Don't know
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.3.01-09b
+- id: q_2_4_01_01
+  canonical_question: Is all data classified by the minimal requirements for transport
+    storage and destruction?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.4.01-01
+- id: q_2_4_01_02
+  canonical_question: Does the transport mechanism used by the TSP and the payment
+    application have a security level that as a minimum matches the security level
+    of the data being transported?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.4.01-02
+- id: q_2_4_01_04
+  canonical_question: Is all non authenticated data rejected or destroyed?
+  topics: []
+  default:
+    answer_type: Discarded
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.4.01-04
+- id: q_2_4_01_05
+  canonical_question: Does the payment application lock itself after a defined number
+    of non authenticated data attempts?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.4.01-05
+- id: q_2_5_01_01
+  canonical_question: Do the application management commands contain mechanisms to
+    prevent replay attacks?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.5.01-01
+- id: q_2_5_01_02
+  canonical_question: Are application management commands encrypted and signed?
+  topics:
+  - Encryption
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.5.01-02
+- id: q_2_5_01_03
+  canonical_question: Does the payment application use expiry mechanisms for transactions
+    and data  management which lock irreversibly upon expiry?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 2.5.01-03
+- id: q_3_2_00_01a
+  canonical_question: Does the site have all necessary security features in place
+    to perform OTA provisioning?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.2.00-01a
+- id: q_3_2_00_01b
+  canonical_question: 'Where the TSP is a card personalization bureau does the site
+    have a current MasterCard Bureau
+
+    approval Certificate?'
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.2.00-01b
+- id: q_3_2_00_02
+  canonical_question: Does the TSP have the necessary hardware and software including
+    physical safes to perform OTA provisioning?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.2.00-02
+- id: q_3_2_00_03
+  canonical_question: Is all hardware and software used by the TSP to perform OTA
+    Provisioning deployed in accordance with the security requirements detailed within
+    this checklist?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.2.00-03
+- id: q_3_2_01_01
+  canonical_question: Has a Senior Manager with adequate security experience being
+    the Chief Information security Officer, or CISO) been designated, in writing,
+    to be responsible for the overall implementation of the instant card issuance
+    program?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.2.01-01
+- id: q_3_2_01_02a
+  canonical_question: Has the CISO appointed a ‘back up’ person who can act on his
+    behalf?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.2.01-02a
+- id: q_3_2_01_02b
+  canonical_question: Does this person have adequate training and skills to temporarily
+    perform the backup function?
+  topics:
+  - Backup
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.2.01-02b
+- id: q_3_3_00_01
+  canonical_question: 'Do you have a Security Management system that addresses the
+    following?
+
+    - Security Policy standards and procedures
+
+    - Security Audit process
+
+    - Risk Management
+
+    - Incident response
+
+    - Contingency planning and procedures
+
+    - None of the above'
+  topics:
+  - Incident Response
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.00-01
+- id: q_3_3_01_01
+  canonical_question: Is there a defined and documented Information security policy?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.01-01
+- id: q_3_3_01_02
+  canonical_question: Is there a defined and implemented data classification system
+    in use?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.01-02
+- id: q_3_3_01_03
+  canonical_question: Is there a defined and implemented documentation control process?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.01-03
+- id: q_3_3_01_04
+  canonical_question: Are all staff granted access to the security policies and procedures?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.01-04
+- id: q_3_3_01_05
+  canonical_question: Are all business partners, contractors and customers aware of
+    the security policies relevant to their responsibilities?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.01-05
+- id: q_3_3_01_06
+  canonical_question: Are all external parties required to adhere to your security
+    policies and procedures?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.01-06
+- id: q_3_3_01_07
+  canonical_question: Where other parties are involved in the OTA provisioning process
+    are the relevant security policies communicated to those parties?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.01-07
+- id: q_3_3_02_01
+  canonical_question: Is there a defined internal audit methodology?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.02-01
+- id: q_3_3_02_02
+  canonical_question: Is the internal audit group independent from those involved
+    in the OTA provisioning process?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.02-02
+- id: q_3_3_02_03
+  canonical_question: Does the internal audit group produce an annual audit plan?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.02-03
+- id: q_3_3_02_04
+  canonical_question: How many times per year are all areas and departments audited?
+  topics:
+  - Logging
+  default:
+    answer_type: 2
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.02-04
+- id: q_3_3_02_05
+  canonical_question: Is an audit report issued to all relevant managers indicating
+    all non compliances?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.02-05
+- id: q_3_3_02_06
+  canonical_question: Are a list of corrective actions produced for all non conformances
+    raised?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.02-06
+- id: q_3_3_02_06a
+  canonical_question: Are these corrective actions assigned to individuals?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.02-06a
+- id: q_3_3_02_06b
+  canonical_question: Do the corrective actions have clearly defined start and completion
+    dates?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.02-06b
+- id: q_3_3_02_06c
+  canonical_question: Are all corrective actions approved by relevant line managers?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.02-06c
+- id: q_3_3_02_07
+  canonical_question: Is there a clearly defined escalation process for all outstanding
+    non conformances?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.02-07
+- id: q_3_3_02_08
+  canonical_question: Is there a regular review by senior management of all non compliances
+    raised during internal audits?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.02-08
+- id: q_3_3_02_09
+  canonical_question: Are all audit reports retained for at least 12 months?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.02-09
+- id: q_3_3_03_01
+  canonical_question: Do you have an appropriate and documented risk assessment methodology?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.03-01
+- id: q_3_3_03_02
+  canonical_question: How often is a Risk Assessment performed each year?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.03-02
+- id: q_3_3_03_04
+  canonical_question: Are actions and treatments of risks based upon the above risk
+    rating?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.03-04
+- id: q_3_3_03_05
+  canonical_question: Are risk rates periodically reviewed to ensure they remain appropriate?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.03-05
+- id: q_3_3_04_01
+  canonical_question: Is there a formal incident management policy document?
+  topics:
+  - Incident Response
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.04-01
+- id: q_3_3_04_02
+  canonical_question: Does this policy cover all sites involved in the OTA process?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.04-02
+- id: q_3_3_05_01a
+  canonical_question: Is there a documented contingency plan based on a business impact
+    assessment?
+  topics: []
+  default:
+    answer_type: 'No'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.05-01a
+- id: q_3_3_05_01b
+  canonical_question: Does this plan define specific roles for individuals and backups?
+  topics:
+  - Backup
+  - Identity
+  default:
+    answer_type: 'No'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.05-01b
+- id: q_3_3_05_02a
+  canonical_question: How often is this back up plan reviewed per year?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.05-02a
+- id: q_3_3_05_02b
+  canonical_question: How often is this back up plan tested per year?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.3.05-02b
+- id: q_3_4_01_01
+  canonical_question: Are security checks performed for all staff, contractors, and
+    temporary employees?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.01-01
+- id: q_3_4_01_02
+  canonical_question: How long after termination are employee records retained?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.01-02
+- id: q_3_4_01_03
+  canonical_question: Are OTA provisioning activities restricted to suitably trained
+    permanent staff?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.01-03
+- id: q_3_4_01_04
+  canonical_question: Are roles and responsibilities for all TSP employees clearly
+    defined and documented?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.01-04
+- id: q_3_4_01_05
+  canonical_question: Are roles and responsibilities regularly reviewed?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.01-05
+- id: q_3_4_01_06
+  canonical_question: Is formal approval provided to employees for logical and physical
+    access?
+  topics:
+  - Identity
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.01-06
+- id: q_3_4_01_07
+  canonical_question: Are new employees prevented from having system administration
+    responsibilities until appropriate training has been undertaken and restriction
+    criteria met?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.01-07
+- id: q_3_4_01_08
+  canonical_question: When an employee changes role are all access rights(physical
+    and logical) reviewed for applicability and this review formally logged?
+  topics:
+  - Identity
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.01-08
+- id: q_3_4_01_09
+  canonical_question: Are all access rights, passwords and pass codes changed when
+    an employee is re-assigned, including recovering all physical keys?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.01-09
+- id: q_3_4_01_10
+  canonical_question: 'When an employee leaves the company are the following performed
+    immediately?
+
+    - Revoke and remove all user accounts
+
+    - Recover all physical access badges
+
+    - Recover any portable storage devices and laptops
+
+    - Recover all physical access and safe keys
+
+    - None of the above'
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.01-10
+- id: q_3_4_01_11
+  canonical_question: Is a formal record maintained of employees leaving the company
+    confirming all the above actions have been undertaken?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.01-11
+- id: q_3_4_01_12
+  canonical_question: Does the TSP record and verify all external personnel who have
+    access to production systems and equipment, and ensure that such access complies
+    with the security policy?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.01-12
+- id: q_3_4_02_01
+  canonical_question: Are all new and temporary employees and contractors provided
+    with general security awareness training when they join the company?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.02-01
+- id: q_3_4_02_02
+  canonical_question: Are all employees provided security training when assigned to
+    the OTA process?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.02-02
+- id: q_3_4_02_03
+  canonical_question: How often are security staff trained?
+  topics: []
+  default:
+    answer_type: 1 to 2 a year
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.02-03
+- id: q_3_4_02_04
+  canonical_question: Is there a continuous security awareness program running at
+    the TSP?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.4.02-04
+- id: q_3_5_01_01
+  canonical_question: Is the TSP situated in a location serviced by local law and
+    fire services?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.01-01
+- id: q_3_5_01_02
+  canonical_question: Does the TSP have a security guard present during operational
+    hours?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.01-02
+- id: q_3_5_01_03a
+  canonical_question: Does the TSP have a nominated head of security with responsibility
+    for all security?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.01-03a
+- id: q_3_5_01_03b
+  canonical_question: Is there a nominated back up for the head of security?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.01-03b
+- id: q_3_5_01_04
+  canonical_question: Is the head of security or his back up always on site when provisioning
+    work is undertaken?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.01-04
+- id: q_3_5_02_01
+  canonical_question: Are all exterior entrances and exits controlled and access limited
+    to authorized personnel only?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.02-01
+- id: q_3_5_02_02
+  canonical_question: Do all exterior entrances validate that only authorized personnel
+    gain access?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.02-02
+- id: q_3_5_02_03
+  canonical_question: Are all exterior entrances and exits constructed to prevent
+    unauthorized intrusion using solid construction?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.02-03
+- id: q_3_5_02_04
+  canonical_question: Do all exterior entrances and exits comply with local fire and
+    safety requirements?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.02-04
+- id: q_3_5_03_01
+  canonical_question: Are all exterior entrances and exits equipped with an intrusion
+    detection device connected to a central alarm system?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.03-01
+- id: q_3_5_03_02
+  canonical_question: Is this intrusion detection device tested on a regular basis?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.03-02
+- id: q_3_5_03_03
+  canonical_question: Are the tests results recorded and maintained for at least 12
+    months ?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.03-03
+- id: q_3_5_03_04
+  canonical_question: Does the alarm system incorporate a battery backup system, and
+    is this backup system located in a secure area?
+  topics:
+  - Backup
+  - DR/BCP
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.03-04
+- id: q_3_5_04_01
+  canonical_question: Is there a designated high security area within the TSP where
+    all security and sensitive work is performed?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.04-01
+- id: q_3_5_04_02
+  canonical_question: Does this high security area contain all hardware and software
+    required to perform OTA provisioning?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.04-02
+- id: q_3_5_04_03
+  canonical_question: Is all data stored in the high security area protected using
+    recognized security control devices?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.04-03
+- id: q_3_5_04_04
+  canonical_question: Does the high security area have floor to ceiling walls and
+    a closed ceiling?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.04-04
+- id: q_3_5_05_01a
+  canonical_question: Do all doors to the high security area only permit entrance
+    using access readers that badge in and out?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.05-01a
+- id: q_3_5_05_01b
+  canonical_question: Are the access readers linked to a computer system that validates
+    access?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.05-01b
+- id: q_3_5_05_02
+  canonical_question: Is the door fitted with an automatic closing device?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.05-02
+- id: q_3_5_05_03
+  canonical_question: 'If the door remains open for more than 30 seconds will
+
+    - A local audible alarm be activated?
+
+    - The central alarm system be activated?
+
+    - None of the above'
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.05-03
+- id: q_3_5_05_04
+  canonical_question: Is access restricted to authorized personnel only on a person
+    by person basis?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.05-04
+- id: q_3_5_05_05
+  canonical_question: Is all access to the high security area logged by a central
+    computer?
+  topics:
+  - Identity
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.05-05
+- id: q_3_5_05_06
+  canonical_question: Are all logs securely stored and maintained for a minimum of
+    12 months?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.05-06
+- id: q_3_5_05_07
+  canonical_question: 'Are personnel prohibited from taking into the high security
+    area: photographic equipment, video cameras, voice recorders or any other electronic
+    devices that could record or store data?'
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.05-07
+- id: q_3_5_06_01
+  canonical_question: Are internal movement detectors connected to the central alarm
+    system used in the high security area?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.06-01
+- id: q_3_5_06_02
+  canonical_question: When the last authorized employee has badged out of the high
+    security area are the movement detectors activated?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.06-02
+- id: q_3_5_06_03
+  canonical_question: Do movement detectors remain active during all non working hours?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.06-03
+- id: q_3_5_07_01
+  canonical_question: Are CCTV cameras installed in the high security areas?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.07-01
+- id: q_3_5_07_02
+  canonical_question: Do these cameras cover all entrances and exits, and all critical
+    areas within the high security area?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.07-02
+- id: q_3_5_07_03
+  canonical_question: Are the CCTV cameras permanently connected to a recording system?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.07-03
+- id: q_3_5_07_04
+  canonical_question: Are the CCTV cameras active 24 hours a day 7 days a week?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.07-04
+- id: q_3_5_07_05
+  canonical_question: Where local law permits are CCTV recordings maintained for 90
+    days?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.07-05
+- id: q_3_5_07_06
+  canonical_question: Are CCTV cameras capable of recording sensitive data being input
+    into systems or Key generators?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.07-06
+- id: q_3_5_08_01
+  canonical_question: Is physical access to networked systems facilities restricted?
+  topics:
+  - Identity
+  - Network Security
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.08-01
+- id: q_3_5_08_02
+  canonical_question: Are all personnel entering the high security area verified with
+    regard to security clearance?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.08-02
+- id: q_3_5_08_03
+  canonical_question: Do all maintenance and cleaning personnel have clearance to
+    work in the high security area?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.08-03
+- id: q_3_5_08_04
+  canonical_question: Is all maintenance of systems containing provisioning data and
+    or keys performed under dual control?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.08-04
+- id: q_3_5_08_05
+  canonical_question: Is all maintenance activity recorded and logged to include time,
+    date, activity and personnel involved?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.08-05
+- id: q_3_5_08_06
+  canonical_question: Where maintenance requires changes to security safeguards, are
+    those safeguards inspected and certified after all work has been completed?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.08-06
+- id: q_3_5_08_07
+  canonical_question: Are there defined and maintained procedures for the environmental
+    control of the high security area?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.08-07
+- id: q_3_5_08_08a
+  canonical_question: Is all configuration and re-configuration of the access control
+    system performed under dual control?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.08-08a
+- id: q_3_5_08_08b
+  canonical_question: Is an audited log of this activity maintained?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.08-08b
+- id: q_3_5_08_09
+  canonical_question: Are the key card access control logs regularly reviewed to confirm
+    functionality?
+  topics:
+  - Identity
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.08-09
+- id: q_3_5_08_10
+  canonical_question: As part of 9, are records kept of the number of failed logs?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.08-10
+- id: q_3_5_09_01
+  canonical_question: Is smoking permitted in the production and development areas?
+  topics: []
+  default:
+    answer_type: 'No'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.09-01
+- id: q_3_5_09_02
+  canonical_question: Is the site compliant to local fire and safety regulations and
+    procedures?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.09-02
+- id: q_3_5_10_01
+  canonical_question: Is all sensitive material destroyed to industry standards and
+    under dual control?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.10-01
+- id: q_3_5_10_02
+  canonical_question: Are logs maintained of all sensitive material destroyed?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.10-02
+- id: q_3_5_10_03
+  canonical_question: Are these logs maintained for a minimum of 12 months?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.10-03
+- id: q_3_5_11_01
+  canonical_question: Is there a formal OTA process and operational user manual?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.11-01
+- id: q_3_5_11_02
+  canonical_question: Are all staff involved in OTA trained against this manual on
+    an annual basis?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.11-02
+- id: q_3_5_11_03
+  canonical_question: Are records of all training maintained?
+  topics: []
+  default:
+    answer_type: 'No'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.11-03
+- id: q_3_5_11_04
+  canonical_question: Is there evidence available to confirm training has been undertaken?
+  topics: []
+  default:
+    answer_type: 'No'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.11-04
+- id: q_3_5_12_01
+  canonical_question: Is there a detailed procedure that requires the CISO to inform
+    MasterCard immediately in the event of any data being lost, misplaced or otherwise
+    unaccounted for?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.12-01
+- id: q_3_5_12_02
+  canonical_question: Are procedures in place that require the CISO to immediately
+    inform the issuer if there are any discrepancies with any logs or reconciliation
+    checking?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.12-02
+- id: q_3_5_12_03
+  canonical_question: 'Once an incident has been detected are procedures in place
+    ensure that
+
+    :- All OTA provisioning is ceased until the incident has been resolved
+
+    - A comprehensive investigation is undertaken against defined incident management
+    procedures
+
+    - All findings are forwarded to MasterCard for review and investigation
+
+    - None of the above'
+  topics:
+  - Incident Response
+  default:
+    answer_type: 2 & 3
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 3.5.12-03
+- id: q_4_1_01_01
+  canonical_question: Is there a nominated Key Manager with overall responsibility
+    for all activities relating to key generation, use, storage, and deletion?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-01
+- id: q_4_1_01_02
+  canonical_question: Does senior management select the Key Manager for the position
+    within the TSP’s organization?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-02
+- id: q_4_1_01_03
+  canonical_question: Does the Key Manager have a nominated deputy to be called upon
+    when the Key Manager is not on site?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-03
+- id: q_4_1_01_04
+  canonical_question: Do procedures exist for the succession of Key Managers and their
+    deputies?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-04
+- id: q_4_1_01_05
+  canonical_question: Is the Key Manager informed immediately of any security breach
+    or loss of integrity relating to key activities?
+  topics:
+  - Incident Response
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-05
+- id: q_4_1_01_07
+  canonical_question: Is the Key Manager responsible for ensuring that all key management
+    activity is fully documented?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-07
+- id: q_4_1_01_08
+  canonical_question: Is the Key Manager responsible for ensuring that all key management
+    activity is carried out in accordance with the documented procedures?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-08
+- id: q_4_1_01_09
+  canonical_question: Do Is key management documentation available for review by personnel
+    not part of the Key Management team?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-09
+- id: q_4_1_01_10
+  canonical_question: Is all physical equipment associated with key management activity,
+    such as physical keys and smart cards, stored securely?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-10
+- id: q_4_1_01_11
+  canonical_question: Have the roles and responsibilities of key custodians been fully
+    documented?
+  topics:
+  - Identity
+  default:
+    answer_type: 'No'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-11
+- id: q_4_1_01_12a
+  canonical_question: Are all key custodians vetted by the Key Manager, in collaboration
+    with the Personnel Department, to ensure their suitability for the role?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-12a
+- id: q_4_1_01_12b
+  canonical_question: Is the suitability of personnel reviewed on an annual basis?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-12b
+- id: q_4_1_01_13
+  canonical_question: Does each key custodian have a nominated backup, who is fully
+    briefed with regard to his or her backup role?
+  topics:
+  - Backup
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-13
+- id: q_4_1_01_14
+  canonical_question: Does the Key Manager have the right to over-ride operations
+    of the key custodians without input from other supervising managers?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-14
+- id: q_4_1_01_16
+  canonical_question: Does each key custodian undertake not to discuss their role
+    and responsibilities with any other party,=  except when in pursuance of a specific
+    authorized activity that may necessitate such discussion?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-16
+- id: q_4_1_01_17
+  canonical_question: Do procedures exist to ensure that no key custodian has access
+    to more than one clear component of any particular key?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-17
+- id: q_4_1_01_18
+  canonical_question: Is all physical equipment associated with key management such
+    as physical keys or smart cards, stored securely?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.01-18
+- id: q_4_1_02_01
+  canonical_question: 'In relation to key management activity:
+
+    - All high-level key management activity are performed using the hardware security
+    module
+
+    - A device can be authorized with a single PIN, token, or pass-phrase
+
+    - None of the above'
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.02-01
+- id: q_4_1_02_02
+  canonical_question: Is there at least one backup hardware security module?
+  topics:
+  - Backup
+  default:
+    answer_type: 'No'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.02-02
+- id: q_4_1_02_03
+  canonical_question: When in its normal operational state, are the hardware security
+    module’s tamper-resistant mechanisms activated, are all physical keys been removed,
+    and are all unnecessary externally attached devices removed (such as, an operator
+    terminal)?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.02-03
+- id: q_4_1_02_04
+  canonical_question: Does the hardware security module have a real-time clock that
+    can be reset by one member of Key Management team?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.02-04
+- id: q_4_1_02_05
+  canonical_question: Can an operator check the current battery level of the hardware
+    security module?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.02-05
+- id: q_4_1_02_06
+  canonical_question: Has the HSM used for key management been certified to FIPS 140-2
+    level 3?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.02-06
+- id: q_4_1_02_07
+  canonical_question: Does the triggering of any of the tamper-resistant mechanisms
+    of the hardware security module result in the destruction of all clear keys stored
+    or being processed inside the device?
+  topics: []
+  default:
+    answer_type: 'No'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.02-07
+- id: q_4_1_02_08
+  canonical_question: Is the hardware security module’s internal battery capable of
+    maintaining power to the key storage memory for at least seven days?
+  topics: []
+  default:
+    answer_type: 'No'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.02-08
+- id: q_4_1_02_09
+  canonical_question: Are those keys stored inside the hardware security module protected
+    from being deleted from memory in the event of the removal of external power to
+    the device?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.02-09
+- id: q_4_1_02_10
+  canonical_question: Does the hardware security module restrict any function (or
+    combination of functions) that can be used to extract a clear key from the device
+    when it is in normal operational state?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.02-10
+- id: q_4_1_02_11
+  canonical_question: Does the hardware security module maintain a counter for generating
+    audit trail sequence numbers that cannot be reset (unless the device has been
+    tampered with)?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.02-11
+- id: q_4_1_03_01
+  canonical_question: Has the cryptographic hardware used in the card personalization
+    process been certified to FIPS 140 2 Level 3, or higher?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.03-01
+- id: q_4_1_03_02
+  canonical_question: Has the cryptographic hardware been certified to at least FIPs
+    140-1 Level 3?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.03-02
+- id: q_4_1_03_03
+  canonical_question: Are DES keys at least 112 bits (not counting parity bits) and
+    generated inside a hardware security module using an appropriate random or pseudo-random
+    number generator?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.03-03
+- id: q_4_1_03_04
+  canonical_question: Are all RSA key pairs generated inside a hardware security module
+    using an appropriate random or pseudo-random number generator?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.03-04
+- id: q_4_1_03_05
+  canonical_question: Are DES keys protected from being extracted from the device
+    in which they are generated unless in a fragmented form (i.e. two or more components)
+    or encrypted under another key?
+  topics:
+  - Encryption
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.03-05
+- id: q_4_1_03_06
+  canonical_question: Are RSA private keys protected from being extracted from the
+    device in which they are generated unless in a fragmented form (i.e. two or more
+    components) or encrypted under another key?
+  topics:
+  - Encryption
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.03-06
+- id: q_4_1_03_07
+  canonical_question: Are DES keys or RSA private keys restricted from being available
+    in plain form at any time during their generation, except inside the device used
+    to generate the key?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.03-07
+- id: q_4_1_03_08
+  canonical_question: Do all DES keys have an equivalent probability of being generated?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.03-08
+- id: q_4_1_03_09
+  canonical_question: Has a process been implemented to ensure probability of generating
+    a weak prime?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.03-09
+- id: q_4_1_03_10
+  canonical_question: Do RSA key pairs have key sizes that are in accordance with
+    payment system requirements?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.03-10
+- id: q_4_1_03_11
+  canonical_question: Are there no statistical correlations between consecutive pairs
+    of keys that have been generated using the same device?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.03-11
+- id: q_4_1_03_12
+  canonical_question: Have the random or pseudo-random number generators used to generate
+    DES or RSA keys been tested against the statistical tests defined in the FIPS
+    140-2 (or equivalent) standard?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.03-12
+- id: q_4_1_04_01
+  canonical_question: Are all keys distributed between cryptographic devices either
+    clear (in the form of three or more components for RSA and two or more components
+    for DES) or encrypted with a key already securely resident in the system?
+  topics:
+  - Encryption
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.04-01
+- id: q_4_1_04_02
+  canonical_question: In the case of clear components, does each person have access
+    to only one component of a key (although one person may hold a single component
+    for more than one key)?
+  topics:
+  - Identity
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.04-02
+- id: q_4_1_04_03
+  canonical_question: Does key distribution of clear components follow the principles
+    of dual control?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.04-03
+- id: q_4_1_04_04
+  canonical_question: Does the designated component holder (and backup) physically
+    possess tokens, PROMs or other key component holding mechanisms used in distributing
+    keys (or key components) for the minimum practical time?
+  topics:
+  - Backup
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.04-04
+- id: q_4_1_04_05
+  canonical_question: Is the hardware used in the key distribution function, controlled
+    and maintained in a secure environment under dual control?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.04-05
+- id: q_4_1_04_06
+  canonical_question: Is the device used to transfer keys between the cryptographic
+    device that generated the keys and the cryptographic device that will use the
+    keys also a secure cryptographic device?
+  topics: []
+  default:
+    answer_type: 'No'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.04-06
+- id: q_4_1_04_07
+  canonical_question: Are key distribution activities under the control of the Key
+    Management Group, and does that group log all activities?
+  topics:
+  - Logging
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.04-07
+- id: q_4_1_04_08
+  canonical_question: Do keys which are transported electronically use an encryption
+    mechanism which is at least at the same level of security as the keys themselves?
+  topics:
+  - Encryption
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.04-08
+- id: q_4_1_04_10
+  canonical_question: Are all key materials (such as, paper-based components) checked
+    for signs of tampering prior to the material being distributed to the target security
+    module?
+  topics: []
+  default:
+    answer_type: 'Yes'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.04-10
+- id: q_4_1_04_11
+  canonical_question: Is any incident of suspected tampering of key material, the
+    target security module, or a key transport device, immediately reported to the
+    Key Manager, and is the distribution of the key aborted until an investigation
+    into the incident has taken place?
+  topics:
+  - Incident Response
+  default:
+    answer_type: 'No'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.04-11
+- id: q_4_1_04_12
+  canonical_question: In the event that a tampering incident is proven to have taken
+    place (or even suspected), is the affected key material destroyed, under the supervision
+    of the Key Manager?
+  topics:
+  - Incident Response
+  - Logging
+  default:
+    answer_type: 'No'
+    short_comment: ''
+    policy_snippet_id: null
+  approval_status: approved
+  last_reviewed: '2025-08-30'
+  source_ref: 4.1.04-12
