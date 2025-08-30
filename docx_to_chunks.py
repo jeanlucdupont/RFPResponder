@@ -4,7 +4,7 @@ from docx import Document
 
 def chunk_text(text, max_words=120):
     """Split long text into ~max_words chunks"""
-    words = text.split()
+    words = text.split() 
     for i in range(0, len(words), max_words):
         yield " ".join(words[i:i+max_words])
 
