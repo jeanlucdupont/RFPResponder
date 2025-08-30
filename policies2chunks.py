@@ -69,7 +69,7 @@ def upload_jsonl_stream_to_s3(s3_client, bucket, key, records_iter):
 
 def main():
     ap = argparse.ArgumentParser(description="Chunk policy .docx files from S3 and write JSONL back to S3.")
-    ap.add_argument("--in", required=True, help="Input S3 URI prefix (e.g., s3://mybucket/policies/)")
+    ap.add_argument("--in", dest="in_path", required=True, help="Input S3 URI prefix (e.g., s3://mybucket/policies/)")
     ap.add_argument("--out", required=True, help="Output S3 URI (e.g., s3://mybucket/policy-chunks/policy-chunks.jsonl)")
     ap.add_argument("--nda-tier", default="under-nda", choices=["public", "under-nda", "restricted"],
                     help="Default NDA tier to tag each chunk.")
@@ -83,7 +83,7 @@ def main():
     session = boto3.Session(**session_kwargs)
     s3 = session.client("s3")
 
-    in_bucket, in_prefix = parse_s3_uri(args.in)
+    in_bucket, in_prefix = parse_s3_uri(args.in_path)
     out_bucket, out_key = parse_s3_uri(args.out)
 
     def records():
@@ -100,7 +100,7 @@ def main():
                     yield json.dumps(chunk, ensure_ascii=False) + "\n"
         print(f"Processed {total_files} files into {total_chunks} chunks.")
 
-    print(f"Scanning {args.in} for .docx...")
+    print(f"Scanning {args.in_path} for .docx...")
     upload_jsonl_stream_to_s3(s3, out_bucket, out_key, records())
     print(f"Uploaded JSONL to {args.out}")
 
