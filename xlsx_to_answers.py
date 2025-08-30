@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 '''
 xlsx_to_answers.py
-Convert an Excel sheet of canonical answers (stored locally or in S3) into a YAML library.
+Convert an Excel sheet of canonical answers (stored locally or in S3) into a YAML library..
 - Supports --in and --out as either local file paths or s3://bucket/key URIs
 - Detects Yes/No/Number answers
 - Generates stable IDs (from "Ref" when available)
