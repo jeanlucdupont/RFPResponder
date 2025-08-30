@@ -96,23 +96,23 @@ python rfp-responder.py `
 ```mermaid
 flowchart TD
   subgraph Inputs
-    A[Canonical Answers (Excel)<br/>inbox/canonical-answers.xlsx]
-    B[Policies (.docx)<br/>policies/]
-    C[New Questionnaire (Excel)<br/>inbox/questionnaire.xlsx]
+    A["Canonical Answers (Excel)<br/>inbox/canonical-answers.xlsx"]
+    B["Policies (.docx)<br/>policies/"]
+    C["New Questionnaire (Excel)<br/>inbox/questionnaire.xlsx"]
   end
 
   subgraph Processing
-    S1[canonical2yaml.py<br/>(--topics --approve)]
+    S1["canonical2yaml.py<br/>(--topics --approve)"]
     S2[policies2chunks.py]
-    S3[genlib.py<br/>Amazon Bedrock Titan Embeddings<br/>(--min-sim --topk)]
-    S4[rfp-responder.py<br/>(--min-sim)]
+    S3["genlib.py<br/>Amazon Bedrock Titan Embeddings<br/>(--min-sim --topk)"]
+    S4["rfp-responder.py<br/>(--min-sim)"]
   end
 
   subgraph Library
     L1[library/answers.yaml]
     L2[library/policychunks.json]
     L3[library/standard-answers.yaml]
-    L4[proposed_links.yaml<br/>(candidates + confidence)]
+    L4["proposed_links.yaml<br/>(candidates + confidence)"]
   end
 
   subgraph Output
@@ -129,12 +129,10 @@ flowchart TD
   L3 --> S4
   S4 --> O1
 
-  note right of S3: Uses vector similarity to link<br/>canonical answers to policy chunks
-
-  classDef input fill:#e3f2fd,stroke:#1565c0,stroke-width:1px,color:#0d47a1;
-  classDef process fill:#fff8e1,stroke:#f9a825,stroke-width:1px,color:#6d4c41;
-  classDef lib fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px,color:#1b5e20;
-  classDef output fill:#f3e5f5,stroke:#6a1b9a,stroke-width:1px,color:#4a148c;
+  classDef input fill:#e3f2fd,stroke:#1565c0,stroke-width:1px,color:#0d47a1
+  classDef process fill:#fff8e1,stroke:#f9a825,stroke-width:1px,color:#6d4c41
+  classDef lib fill:#e8f5e9,stroke:#2e7d32,stroke-width:1px,color:#1b5e20
+  classDef output fill:#f3e5f5,stroke:#6a1b9a,stroke-width:1px,color:#4a148c
 
   class A,B,C input
   class S1,S2,S3,S4 process
