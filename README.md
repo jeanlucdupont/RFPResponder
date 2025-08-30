@@ -19,7 +19,7 @@ The data used to feed the AI is of very poor quality.
 
 ---
 
-## ⚙️ Architecture Overview
+## Architecture Overview
 
 1. **Canonical answers**
    - inbox/canonical-answers.xlsx is an excel file containings all the questions and answers.
@@ -41,6 +41,9 @@ The data used to feed the AI is of very poor quality.
    - rfp-responder.py takes a new Excel questionnaire and produces a filled-in Excel file with suggested answers, comments, and policy references.
 
 ---
+
+## Script usage
+
 
 **canonical2yaml.py**
 ```
