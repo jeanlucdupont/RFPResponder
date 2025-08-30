@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-import os, io, re, json, argparse
+import os, io, re, json, argparse, urllib.parse
 import boto3
-from botocore.exceptions import ClientError
 from docx import Document
 
 def chunk_text(text, max_words=120):
@@ -27,8 +26,17 @@ def parse_docx_stream(file_like, source_name, nda_tier="under-nda", max_words=12
                 "source_doc": os.path.basename(source_name),
                 "section": current_section or "General",
                 "text": c,
-                "nda_tier": nda_tier  # public / under-nda / restricted
+                "nda_tier": nda_tier
             }
+
+def parse_s3_uri(uri):
+    """Split s3://bucket/key into (bucket, key)."""
+    if not uri.startswith("s3://"):
+        raise ValueError(f"Invalid S3 URI: {uri}")
+    parsed = urllib.parse.urlparse(uri)
+    bucket = parsed.netloc
+    key = parsed.path.lstrip("/")
+    return bucket, key
 
 def iter_s3_docx_objects(s3_client, bucket, prefix):
     """Iterate S3 objects (keys) ending with .docx under prefix."""
@@ -44,103 +52,57 @@ def iter_s3_docx_objects(s3_client, bucket, prefix):
         else:
             break
 
-def upload_jsonl_stream_to_s3(s3_client, bucket, key, records_iter, part_size=8*1024*1024):
-    """
-    Stream JSONL records to S3 using multipart upload.
-    records_iter must yield bytes or str (one JSON line at a time).
-    """
-    # Start multipart upload
-    mpu = s3_client.create_multipart_upload(
+def upload_jsonl_stream_to_s3(s3_client, bucket, key, records_iter):
+    """Upload JSONL data directly to S3 (small/medium output)."""
+    buf = io.BytesIO()
+    for rec in records_iter:
+        if isinstance(rec, str):
+            rec = rec.encode("utf-8")
+        buf.write(rec)
+    buf.seek(0)
+    s3_client.put_object(
         Bucket=bucket,
         Key=key,
+        Body=buf.getvalue(),
         ContentType="application/json; charset=utf-8"
     )
-    upload_id = mpu["UploadId"]
-    parts = []
-    part_number = 1
-    buffer = io.BytesIO()
-
-    def _flush_part():
-        nonlocal part_number, buffer
-        buffer.seek(0)
-        if buffer.tell() == 0 and buffer.getbuffer().nbytes == 0:
-            return None
-        resp = s3_client.upload_part(
-            Bucket=bucket,
-            Key=key,
-            PartNumber=part_number,
-            UploadId=upload_id,
-            Body=buffer
-        )
-        parts.append({"ETag": resp["ETag"], "PartNumber": part_number})
-        part_number += 1
-        buffer = io.BytesIO()
-
-    try:
-        for rec in records_iter:
-            if isinstance(rec, str):
-                rec = rec.encode("utf-8")
-            # If next record won't fit, flush current part
-            if buffer.tell() + len(rec) > part_size:
-                _flush_part()
-            buffer.write(rec)
-        # Flush any remaining data
-        if buffer.tell() > 0:
-            _flush_part()
-
-        s3_client.complete_multipart_upload(
-            Bucket=bucket,
-            Key=key,
-            UploadId=upload_id,
-            MultipartUpload={"Parts": parts}
-        )
-    except Exception as e:
-        # Abort MPU on error to avoid leaking parts
-        s3_client.abort_multipart_upload(Bucket=bucket, Key=key, UploadId=upload_id)
-        raise e
 
 def main():
     ap = argparse.ArgumentParser(description="Chunk policy .docx files from S3 and write JSONL back to S3.")
-    ap.add_argument("--bucket", required=True, help="S3 bucket containing input policies and for output JSONL.")
-    ap.add_argument("--input-prefix", required=True, help="S3 prefix where .docx policies live (e.g., policies/).")
-    ap.add_argument("--output-key", default="policy-chunks/policy-chunks.jsonl",
-                    help="S3 key for output JSONL (e.g., policy-chunks/policy-chunks.jsonl).")
-    ap.add_argument("--profile", default="", help="AWS profile name (optional).")
-    ap.add_argument("--region", default=None, help="AWS region name (optional).")
+    ap.add_argument("--in", required=True, help="Input S3 URI prefix (e.g., s3://mybucket/policies/)")
+    ap.add_argument("--out", required=True, help="Output S3 URI (e.g., s3://mybucket/policy-chunks/policy-chunks.jsonl)")
     ap.add_argument("--nda-tier", default="under-nda", choices=["public", "under-nda", "restricted"],
                     help="Default NDA tier to tag each chunk.")
     ap.add_argument("--max-words", type=int, default=120, help="Approx max words per chunk.")
+    ap.add_argument("--profile", default="", help="AWS profile name (optional).")
     args = ap.parse_args()
 
     session_kwargs = {}
     if args.profile:
         session_kwargs["profile_name"] = args.profile
-    if args.region:
-        session_kwargs["region_name"] = args.region
-
     session = boto3.Session(**session_kwargs)
     s3 = session.client("s3")
 
-    # Record generator: lazily list, download, parse, and yield JSONL lines
+    in_bucket, in_prefix = parse_s3_uri(args.in)
+    out_bucket, out_key = parse_s3_uri(args.out)
+
     def records():
         total_chunks = 0
         total_files = 0
-        for key, size in iter_s3_docx_objects(s3, args.bucket, args.input_prefix):
+        for key, size in iter_s3_docx_objects(s3, in_bucket, in_prefix):
             total_files += 1
-            obj = s3.get_object(Bucket=args.bucket, Key=key)
+            obj = s3.get_object(Bucket=in_bucket, Key=key)
             with io.BytesIO(obj["Body"].read()) as bio:
                 for chunk in parse_docx_stream(
-                    bio, source_name=key, nda_tier=args.nda-tier if hasattr(args, "nda-tier") else args.nda_tier,
-                    max_words=args.max_words
+                    bio, source_name=key, nda_tier=args.nda_tier, max_words=args.max_words
                 ):
                     total_chunks += 1
-                    yield (json.dumps(chunk, ensure_ascii=False) + "\n")
-        # Emit a short progress line to STDOUT at the end (not part of JSONL)
+                    yield json.dumps(chunk, ensure_ascii=False) + "\n"
         print(f"Processed {total_files} files into {total_chunks} chunks.")
 
-    print(f"Scanning s3://{args.bucket}/{args.input-prefix if hasattr(args,'input-prefix') else args.input_prefix} for .docx...")
-    upload_jsonl_stream_to_s3(s3, args.bucket, args.output_key, records_iter=records())
-    print(f"Uploaded JSONL to s3://{args.bucket}/{args.output_key}")
+    print(f"Scanning {args.in} for .docx...")
+    upload_jsonl_stream_to_s3(s3, out_bucket, out_key, records())
+    print(f"Uploaded JSONL to {args.out}")
 
 if __name__ == "__main__":
     main()
