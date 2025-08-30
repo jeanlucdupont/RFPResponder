@@ -1,19 +1,11 @@
 #!/usr/bin/env python3
 '''
-xlsx_to_answers.py
 Convert an Excel sheet of canonical answers (stored locally or in S3) into a YAML library..
 - Supports --in and --out as either local file paths or s3://bucket/key URIs
 - Detects Yes/No/Number answers
 - Generates stable IDs (from "Ref" when available)
 - Copies comments
 - (Optional) auto-tags topics based on keywords
-Usage examples:
-# Local -> S3
-python xlsx_to_answers.py --in canonical-answers.xlsx --out s3://my-bucket/library/answers.yaml --topics --approve
-# S3 -> S3 (Windows PowerShell)
-python xlsx_to_answers.py --in s3://my-bucket/inbox/canonical-answers.xlsx --out s3://my-bucket/library/answers.yaml --topics --approve --profile XXXXXX
-# S3 -> Local
-python xlsx_to_answers.py --in s3://my-bucket/inbox/canonical-answers.xlsx --out answers.yaml --sheet "sheet1"
 '''
 
 import argparse, re, sys, io, os, yaml, pandas as pd
